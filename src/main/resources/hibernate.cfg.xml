@@ -28,8 +28,9 @@
         <property name="hbm2ddl.auto">update</property>
          
         <!-- Use Annotation-based mapping metadata -->
-        <mapping class="entity.Person"/>  
-        
+        <mapping class="entity.Person"/>
+        <mapping class="entity.House"/>
+
     </session-factory>
 </hibernate-configuration>
 
