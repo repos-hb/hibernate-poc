@@ -11,6 +11,7 @@ public class Room {
 
     public Room() {
 
+
     }
 
     public Room(int length, int height, int width) {
