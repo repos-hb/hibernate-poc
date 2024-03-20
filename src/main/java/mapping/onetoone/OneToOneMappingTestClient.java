@@ -20,6 +20,7 @@ public class OneToOneMappingTestClient {
         			
         			Passport passport = new Passport();
 					passport.setValid(true);
+					passport.setPassportNumber("9999999999");
 
 					Customer customer = new Customer();
 					customer.setName("sumit");

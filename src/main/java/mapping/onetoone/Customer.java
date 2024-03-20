@@ -6,13 +6,14 @@ import jakarta.persistence.*;
 public class Customer {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+//    @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
 
     private String name;
 
     @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
-    @JoinColumn(name = "passport_id", unique = true)
+    @JoinColumn(name = "passport_id")
+    @MapsId     // maps passport id to customer id
     private Passport passport;
 
     public Customer() {
