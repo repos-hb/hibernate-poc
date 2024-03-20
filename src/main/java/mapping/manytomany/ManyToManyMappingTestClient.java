@@ -19,19 +19,20 @@ public class ManyToManyMappingTestClient {
         			Actor actor = new Actor();
 					actor.setName("Leo");
 
-					Actor actor1 = new Actor();
-					actor1.setName("Bale");
+//					Actor actor1 = new Actor();
+//					actor1.setName("Bale");
 
 					Movie movie = new Movie();
 					movie.setTitle("titanic");
-					movie.getActors().add(actor);
+//					movie.getActors().add(actor);
+					actor.setMovies(movie);
 
-					Movie movie1 = new Movie();
-					movie1.setTitle("batman");
-					movie1.getActors().add(actor1);
+//					Movie movie1 = new Movie();
+//					movie1.setTitle("batman");
+//					movie1.getActors().add(actor1);
 
-        			session.persist(movie);
-					session.persist(movie1);
+//        			session.persist(movie);
+					session.persist(actor);
 	        		txn.commit();
         		}	catch(Exception e) {
 	        			if(txn != null) { txn.rollback(); }

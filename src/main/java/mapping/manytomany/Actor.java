@@ -14,7 +14,7 @@ public class Actor {
 
     private String name;
 
-    @ManyToMany(mappedBy = "actors")
+    @ManyToMany(mappedBy = "actors", cascade = CascadeType.PERSIST)
     private List<Movie> movies = new ArrayList<>();
 
     public Actor() {
@@ -40,7 +40,14 @@ public class Actor {
         return movies;
     }
 
-    public void setMovies(List<Movie> movies) {
-        this.movies = movies;
+    public void setMovies(Movie movie) {
+//        this.movies = movies;
+        getMovies().add(movie);
+        movie.getActors().add(this);
+    }
+
+    public void removeMovies(Movie movie){
+        getMovies().remove(movie);
+        movie.getActors().remove(this);
     }
 }
