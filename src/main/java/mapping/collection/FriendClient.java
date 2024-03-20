@@ -1,5 +1,6 @@
 package mapping.collection;
 
+import entity.Address;
 import enums.Employee;
 import enums.EmployeeStatus;
 import org.hibernate.Session;
@@ -22,6 +23,9 @@ public class FriendClient {
 					friend.setName("jack");
 					friend.setEmail("jack@abc");
 					friend.setNicknames(new ArrayList<>(Arrays.asList("jo","jacky","jim")));
+
+					friend.getAddressList().add(new Address("NNR","KOL","28"));
+					friend.getAddressList().add(new Address("RSR","DEL","20"));
 
 					session.persist(friend);
 

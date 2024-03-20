@@ -1,5 +1,6 @@
 package mapping.collection;
 
+import entity.Address;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -20,6 +21,13 @@ public class Friend {
     @CollectionTable(name = "friend_nicknames",joinColumns = {@JoinColumn(name = "friend_id")})
     @Column(name = "nickname")
     private List<String> nicknames = new ArrayList<>();
+
+    @ElementCollection
+    @CollectionTable(name = "friend_addressList", joinColumns = {@JoinColumn(name = "friend_id")})
+    @AttributeOverrides({
+            @AttributeOverride(name = "street", column = @Column(name = "street_name"))
+    })
+    private List<Address> addressList = new ArrayList<>();
 
     public Friend(){}
 
@@ -53,5 +61,13 @@ public class Friend {
 
     public void setNicknames(List<String> nicknames) {
         this.nicknames = nicknames;
+    }
+
+    public List<Address> getAddressList() {
+        return addressList;
+    }
+
+    public void setAddressList(List<Address> addressList) {
+        this.addressList = addressList;
     }
 }
