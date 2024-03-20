@@ -32,6 +32,8 @@
         <mapping class="entity.House"/>
         <mapping class="mapping.Guide"/>
         <mapping class="mapping.Student"/>
+        <mapping class="mapping.onetoone.Customer"/>
+        <mapping class="mapping.onetoone.Passport"/>
 
     </session-factory>
 </hibernate-configuration>
