@@ -34,12 +34,11 @@
         <mapping class="mapping.Student"/>
         <mapping class="mapping.onetoone.Customer"/>
         <mapping class="mapping.onetoone.Passport"/>
+        <mapping class="mapping.manytomany.Movie"/>
+        <mapping class="mapping.manytomany.Actor"/>
 
     </session-factory>
 </hibernate-configuration>
-
-
-
 
 
 
