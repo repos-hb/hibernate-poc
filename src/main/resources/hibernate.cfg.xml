@@ -28,17 +28,19 @@
         <property name="hbm2ddl.auto">create</property>
          
         <!-- Use Annotation-based mapping metadata -->
-        <mapping class="entity.Person"/>
-        <mapping class="entity.House"/>
-        <mapping class="mapping.Guide"/>
-        <mapping class="mapping.Student"/>
-        <mapping class="mapping.onetoone.Customer"/>
-        <mapping class="mapping.onetoone.Passport"/>
-        <mapping class="mapping.manytomany.Movie"/>
-        <mapping class="mapping.manytomany.Actor"/>
-        <mapping class="enums.Employee"/>
-        <mapping class="mapping.collection.Friend"/>
-        <mapping class="compositepk.Car"/>
+<!--        <mapping class="entity.Person"/>-->
+<!--        <mapping class="entity.House"/>-->
+<!--        <mapping class="mapping.Guide"/>-->
+<!--        <mapping class="mapping.Student"/>-->
+<!--        <mapping class="mapping.onetoone.Customer"/>-->
+<!--        <mapping class="mapping.onetoone.Passport"/>-->
+<!--        <mapping class="mapping.manytomany.Movie"/>-->
+<!--        <mapping class="mapping.manytomany.Actor"/>-->
+<!--        <mapping class="enums.Employee"/>-->
+<!--        <mapping class="mapping.collection.Friend"/>-->
+<!--        <mapping class="compositepk.Car"/>-->
+        <mapping class="compositepk.Parent"/>
+        <mapping class="compositepk.Child"/>
 
     </session-factory>
 </hibernate-configuration>
